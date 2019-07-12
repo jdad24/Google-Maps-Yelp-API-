@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Student Name: Joshua Dadson   -->
+<!-- Google API Key: AIzaSyCakgANiNHp3x6B9mOIniJn0fW-iGHllPg -->
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display Best Restaurants on a Map</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="yelp.js"></script>
+	<style>
+		#map {
+			height: 600px;
+			width: 500px;
+			margin: auto;
+		}
+		
+		body{
+			background-color: silver;	
+		}
+		
+		#output {
+			height:50%;
+		}
+		
+		h1 {
+			color: darkblue;
+			text-align: center;
+		}
+		
+		img {
+			height:40%;
+			width:25%;
+		}
+		
+		html, body {
+		        height: 100%;
+		        margin: 0;
+		        padding: 0;
+		      }
+	</style>
+	
+  </head>
+  <body onload="initialize();">
+    <form>
+       <label>Search Terms: <input type="text" id="search"/></label> 
+	   <label> Area: <input type="text" id="area"/></label>
+       <input type="button" onclick="sendRequest();" value="Find"/>
+    </form>
+    <div id="output">&nbsp;</div>
+	<div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCakgANiNHp3x6B9mOIniJn0fW-iGHllPg&callback=initialize"
+    async defer></script>
+  </body>
+</html>
